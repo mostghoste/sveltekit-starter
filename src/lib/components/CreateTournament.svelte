@@ -8,8 +8,12 @@
     };
 </script>
 
-<div class="flex justify-center items-center flex-col">
-    <button class="btn" on:click={handleAddTournament}>Pridėti turnyrą</button>
+<div
+    class="flex justify-center items-center flex-col bg-base-200 rounded-md p-4"
+>
+    <button class="btn btn-accent" on:click={handleAddTournament}
+        >Pridėti turnyrą</button
+    >
     <p>Turnyrai:</p>
     <ol>
         {#each Tournaments as tournament}
