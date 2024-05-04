@@ -8,8 +8,8 @@
     };
 </script>
 
-<div class="wrapper">
-    <button on:click={handleAddTournament}>Pridėti turnyrą</button>
+<div class="flex justify-center items-center flex-col">
+    <button class="btn" on:click={handleAddTournament}>Pridėti turnyrą</button>
     <p>Turnyrai:</p>
     <ol>
         {#each Tournaments as tournament}
@@ -19,9 +19,4 @@
 </div>
 
 <style>
-    .wrapper {
-        border: 1px solid white;
-        padding: 10px;
-        border-radius: 8px;
-    }
 </style>

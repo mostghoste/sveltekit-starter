@@ -21,9 +21,13 @@ const config = {
 	},
 	plugins: [
 		// Its either daisyui or skeleton
+		require("@tailwindcss/typography"),
     require('daisyui'),
 		// skeleton
-	]
+	],
+	daisyui: {
+		themes: ["light", "dark", "dim"],
+	  },
 } satisfies Config;
 
 export default config;
