@@ -20,8 +20,9 @@ const config = {
 		extend: {},
 	},
 	plugins: [
-		// 4. Append the Skeleton plugin (after other plugins)
-		skeleton
+		// Its either daisyui or skeleton
+    require('daisyui'),
+		// skeleton
 	]
 } satisfies Config;
 
