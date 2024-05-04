@@ -30,7 +30,6 @@ declare module '$env/static/private' {
 	export const XDG_ACTIVATION_TOKEN: string;
 	export const LESSOPEN: string;
 	export const KDE_FULL_SESSION: string;
-	export const npm_package_dev: string;
 	export const LANGUAGE: string;
 	export const USER: string;
 	export const PAM_KWALLET5_LOGIN: string;
@@ -40,7 +39,6 @@ declare module '$env/static/private' {
 	export const PT8HOME: string;
 	export const XDG_SESSION_TYPE: string;
 	export const npm_node_execpath: string;
-	export const npm_package_resolved: string;
 	export const KONSOLE_VERSION: string;
 	export const QT_WAYLAND_RECONNECT: string;
 	export const SHLVL: string;
@@ -48,12 +46,10 @@ declare module '$env/static/private' {
 	export const HOME: string;
 	export const KDE_APPLICATIONS_AS_SCOPE: string;
 	export const OLDPWD: string;
-	export const npm_package_optional: string;
 	export const DESKTOP_SESSION: string;
 	export const NVM_BIN: string;
 	export const npm_package_json: string;
 	export const NVM_INC: string;
-	export const npm_package_engines_node: string;
 	export const SHELL_SESSION_ID: string;
 	export const GTK_RC_FILES: string;
 	export const XDG_SEAT_PATH: string;
@@ -64,7 +60,6 @@ declare module '$env/static/private' {
 	export const MANAGERPID: string;
 	export const npm_config_userconfig: string;
 	export const npm_config_local_prefix: string;
-	export const npm_package_integrity: string;
 	export const SYSTEMD_EXEC_PID: string;
 	export const DBUS_SESSION_BUS_ADDRESS: string;
 	export const COLORTERM: string;
@@ -125,12 +120,10 @@ declare module '$env/static/private' {
 	export const KDE_FORK_SLAVES: string;
 	export const KONSOLE_DBUS_SERVICE: string;
 	export const LC_MEASUREMENT: string;
-	export const npm_package_dev_optional: string;
 	export const LC_IDENTIFICATION: string;
 	export const XDG_VTNR: string;
 	export const npm_config_globalconfig: string;
 	export const npm_config_init_module: string;
-	export const npm_package_peer: string;
 	export const JAVA_HOME: string;
 	export const PWD: string;
 	export const FNM_MULTISHELL_PATH: string;
@@ -147,6 +140,7 @@ declare module '$env/static/private' {
 	export const KDE_SESSION_UID: string;
 	export const INIT_CWD: string;
 	export const EDITOR: string;
+	export const NODE_ENV: string;
 }
 
 /**
@@ -182,7 +176,6 @@ declare module '$env/dynamic/private' {
 		XDG_ACTIVATION_TOKEN: string;
 		LESSOPEN: string;
 		KDE_FULL_SESSION: string;
-		npm_package_dev: string;
 		LANGUAGE: string;
 		USER: string;
 		PAM_KWALLET5_LOGIN: string;
@@ -192,7 +185,6 @@ declare module '$env/dynamic/private' {
 		PT8HOME: string;
 		XDG_SESSION_TYPE: string;
 		npm_node_execpath: string;
-		npm_package_resolved: string;
 		KONSOLE_VERSION: string;
 		QT_WAYLAND_RECONNECT: string;
 		SHLVL: string;
@@ -200,12 +192,10 @@ declare module '$env/dynamic/private' {
 		HOME: string;
 		KDE_APPLICATIONS_AS_SCOPE: string;
 		OLDPWD: string;
-		npm_package_optional: string;
 		DESKTOP_SESSION: string;
 		NVM_BIN: string;
 		npm_package_json: string;
 		NVM_INC: string;
-		npm_package_engines_node: string;
 		SHELL_SESSION_ID: string;
 		GTK_RC_FILES: string;
 		XDG_SEAT_PATH: string;
@@ -216,7 +206,6 @@ declare module '$env/dynamic/private' {
 		MANAGERPID: string;
 		npm_config_userconfig: string;
 		npm_config_local_prefix: string;
-		npm_package_integrity: string;
 		SYSTEMD_EXEC_PID: string;
 		DBUS_SESSION_BUS_ADDRESS: string;
 		COLORTERM: string;
@@ -277,12 +266,10 @@ declare module '$env/dynamic/private' {
 		KDE_FORK_SLAVES: string;
 		KONSOLE_DBUS_SERVICE: string;
 		LC_MEASUREMENT: string;
-		npm_package_dev_optional: string;
 		LC_IDENTIFICATION: string;
 		XDG_VTNR: string;
 		npm_config_globalconfig: string;
 		npm_config_init_module: string;
-		npm_package_peer: string;
 		JAVA_HOME: string;
 		PWD: string;
 		FNM_MULTISHELL_PATH: string;
@@ -299,6 +286,7 @@ declare module '$env/dynamic/private' {
 		KDE_SESSION_UID: string;
 		INIT_CWD: string;
 		EDITOR: string;
+		NODE_ENV: string;
 		[key: `PUBLIC_${string}`]: undefined;
 		[key: `${string}`]: string | undefined;
 	}
