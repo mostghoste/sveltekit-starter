@@ -5,6 +5,11 @@ DaisyUI
 Skeleton (Optional)
 unplugin icons
 
+pocketbase is hosted on http://127.0.0.1:8090
+demo account:
+- demo@demo.com
+- DemoSlaptazodis
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
