@@ -1,9 +1,8 @@
 <script lang="ts">
-    import { Us, Lt, GbEng } from "svelte-flag-icons";
     import Countries from "$lib/components/utils/Countries.ts";
-    import Flag from "./utils/Flag.svelte";
+    import TeamChip from "./utils/TeamChip.svelte";
 
-    type Team = {
+    export type Team = {
         name: string;
         country: Countries;
     };
@@ -38,11 +37,7 @@
         >
             <div class="flex h-24 gap-2 justify-between">
                 <!-- Left icon -->
-                <div
-                    class="rounded-md h-full aspect-square bg-gray-800 shadow-gray-900 shadow-md flex justify-center items-center"
-                >
-                    <Flag countryName={Countries.LT}></Flag>
-                </div>
+                <TeamChip country={Countries.LT}></TeamChip>
                 <!-- Middle -->
                 <div class="flex flex-col justify-end items-center gap-2">
                     <div
@@ -55,11 +50,7 @@
                     />
                 </div>
                 <!-- Right icon -->
-                <div
-                    class="rounded-md h-full aspect-square bg-gray-800 shadow-gray-900 shadow-md flex justify-center items-center"
-                >
-                    <Flag countryName={Countries.EN}></Flag>
-                </div>
+                <TeamChip country={Countries.EN}></TeamChip>
             </div>
         </div>
     {:else}

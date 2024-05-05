@@ -2,12 +2,11 @@
     import Countries from "./Countries";
     import { Lt, GbEng } from "svelte-flag-icons";
     export let countryName: Countries;
-
-    let flagClass = "h-full w-full";
+    export let className: string = "";
 </script>
 
 {#if countryName == Countries.LT}
-    <Lt class={flagClass}></Lt>
+    <Lt class={className}></Lt>
 {:else if countryName == Countries.EN}
-    <GbEng></GbEng>
+    <GbEng class={className}></GbEng>
 {/if}
