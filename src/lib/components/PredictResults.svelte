@@ -2,7 +2,7 @@
     import Countries from "$lib/components/utils/Countries.ts";
     import TeamChip from "./utils/TeamChip.svelte";
 
-    export type Team = {
+    type Team = {
         name: string;
         country: Countries;
     };
@@ -19,6 +19,7 @@
 
     let games: Game[] = [exampleGame, exampleGame, exampleGame];
     let selectedGame = 0;
+    let selectedTeam: null | Team = null;
 </script>
 
 <div
@@ -37,7 +38,15 @@
         >
             <div class="flex h-24 gap-2 justify-between">
                 <!-- Left icon -->
-                <TeamChip country={Countries.LT}></TeamChip>
+                <button
+                    class={`btn w-24 box-content h-24 p-0 m-0 border-none hover:scale-[1.05] shadow-md ring-4 ${selectedTeam == games[selectedGame].homeTeam ? "ring-green-600" : "ring-transparent"}`}
+                    on:click={() => {
+                        selectedTeam = games[selectedGame].homeTeam;
+                    }}
+                >
+                    <TeamChip team={games[selectedGame].homeTeam}
+                    ></TeamChip></button
+                >
                 <!-- Middle -->
                 <div class="flex flex-col justify-end items-center gap-2">
                     <div
@@ -50,9 +59,18 @@
                     />
                 </div>
                 <!-- Right icon -->
-                <TeamChip country={Countries.EN}></TeamChip>
+                <button
+                    class={`btn w-24 box-content h-24 p-0 m-0 border-none hover:scale-[1.05] shadow-md ring-4 ${selectedTeam == games[selectedGame].awayTeam ? "ring-green-600" : "ring-transparent"}`}
+                    on:click={() => {
+                        selectedTeam = games[selectedGame].awayTeam;
+                    }}
+                >
+                    <TeamChip team={games[selectedGame].awayTeam}
+                    ></TeamChip></button
+                >
             </div>
         </div>
+        <p>Selected team: {selectedTeam?.name}</p>
     {:else}
         <p>Viskas!</p>
     {/if}
