@@ -42,6 +42,7 @@
   },
   "type": "module",
   "dependencies": {
+    "pocketbase": "^0.21.2",
     "svelte-flag-icons": "^1.0.3"
-  }
+  },
 }

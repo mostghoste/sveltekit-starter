@@ -4,6 +4,8 @@
     import Leaderboard from "$lib/components/Leaderboard.svelte";
     import PredictResults from "$lib/components/PredictResults.svelte";
     import Profile from "$lib/components/Profile.svelte";
+    import type { PageServerLoad } from "./$types";
+    export let data: PageServerLoad;
 </script>
 
 <div class="flex gap-4 m-4">

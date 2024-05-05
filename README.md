@@ -5,6 +5,15 @@ DaisyUI
 Skeleton (Optional)
 unplugin icons
 
+pocketbase is hosted on http://127.0.0.1:8090
+## demo account:
+- demo@demo.com
+- DemoSlaptazodis
+
+## Useful commands
+- `npx pocketbase-typegen --db ./pocketbase/pb_data/data.db --out ./src/lib/types/pocketbase-types.ts`
+    - Regenerates pocketbase types from the pocketbase database
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
