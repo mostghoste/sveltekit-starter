@@ -1,6 +1,7 @@
 <script lang="ts">
     import CreateTournament from "$lib/components/CreateTournament.svelte";
     import EditTournament from "$lib/components/EditTournament.svelte";
+    import Leaderboard from "$lib/components/Leaderboard.svelte";
     import PredictResults from "$lib/components/PredictResults.svelte";
 </script>
 
@@ -14,6 +15,7 @@
     </div>
     <div class="prose flex flex-col gap-4">
         <PredictResults></PredictResults>
+        <Leaderboard></Leaderboard>
     </div>
 </div>
 
