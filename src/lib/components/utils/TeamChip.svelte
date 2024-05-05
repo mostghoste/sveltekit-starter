@@ -7,6 +7,15 @@
         country: Countries;
     };
     export let team: Team;
+
+    // Function to truncate the team name
+    function truncateName(name: string, maxLength: number): string {
+        if (name.length <= maxLength) {
+            return name;
+        } else {
+            return name.slice(0, maxLength) + "...";
+        }
+    }
 </script>
 
 <div
@@ -17,8 +26,8 @@
     >
         <Flag className="w-10 h-8 m-0 p-0" countryName={team.country}></Flag>
     </div>
-    <h4 class="text-gray-300 font-light m-0 p-0 text-xs">
-        {team.name}
+    <h4 class="text-gray-300 font-light m-0 p-0 text-xs text-ellipsis">
+        {truncateName(team.name, 20)}
     </h4>
 </div>
 
