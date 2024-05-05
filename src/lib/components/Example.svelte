@@ -28,8 +28,10 @@
                 <p>User Email: {user.email}</p>
                 <p>Username: {user.username}</p>
             </div>
+            <a class="btn" href="/auth">Atsijungti</a>
         {:else}
             <p>Naudotojas neprisijungęs</p>
+            <a class="btn" href="/auth">Prisijungti</a>
         {/if}
     </div>
 </div>
