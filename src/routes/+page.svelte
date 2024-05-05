@@ -3,6 +3,7 @@
     import EditTournament from "$lib/components/EditTournament.svelte";
     import Leaderboard from "$lib/components/Leaderboard.svelte";
     import PredictResults from "$lib/components/PredictResults.svelte";
+    import Profile from "$lib/components/Profile.svelte";
 </script>
 
 <div class="flex gap-4 m-4">
@@ -16,6 +17,7 @@
     <div class="prose flex flex-col gap-4">
         <PredictResults></PredictResults>
         <Leaderboard></Leaderboard>
+        <Profile></Profile>
     </div>
 </div>
 
