@@ -1,8 +1,9 @@
 <script lang="ts">
     import PocketBase from "pocketbase";
     import IcOutlineErrorOutline from "~icons/ic/outline-error-outline";
+    import { POCKETBASE_IP } from "./utils/Pocketbase";
 
-    const pb = new PocketBase("http://localhost:8090");
+    const pb = new PocketBase(POCKETBASE_IP);
     let username = "";
     let password = "";
     let authError = false;

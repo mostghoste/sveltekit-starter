@@ -1,0 +1,1 @@
+export const POCKETBASE_IP = "https://185.34.52.111:8090";
