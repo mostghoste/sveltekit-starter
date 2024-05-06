@@ -8,17 +8,23 @@
     class="flex justify-start items-start flex-col bg-base-200 rounded-md shadow-xl p-4 gap-2"
 >
     <header class="flex justify-between w-full">
-        <h2 class="m-0">Profilis</h2>
-        <p class="text-right m-0">{user ? user.name : "neprisijungęs"}</p>
+        <h2 class="m-0 p-0">Profilis</h2>
+        {#if user}
+            <p class="text-right m-0">{user ? user.name : "neprisijungęs"}</p>
+        {:else}
+            <div class="flex gap-2">
+                <a class="btn btn-sm btn-secondary" href="/auth">Registruotis</a
+                >
+                <a class="btn btn-sm btn-primary" href="/auth">Prisijungti</a>
+            </div>
+        {/if}
     </header>
 
     <div class="flex justify-end flex-col items-end p-0 m-0 w-full gap-2">
         {#if user}
             <ProfileCardSmall {user}></ProfileCardSmall>
             <a class="btn btn-sm btn-primary" href="/auth">Atsijungti</a>
-        {:else}
-            <a class="btn btn-sm" href="/auth">Prisijungti</a>
-        {/if}
+        {:else}{/if}
     </div>
 
     <!-- <footer class="flex justify-end items-end w-full gap-2">

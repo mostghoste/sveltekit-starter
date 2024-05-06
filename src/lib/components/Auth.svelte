@@ -9,7 +9,7 @@
     let errorMessage = "";
 
     const minUsernameLen = 4;
-    const minPasswordLen = 4;
+    const minPasswordLen = 8;
 
     const login = async (form: HTMLFormElement) => {
         if (username.length < minUsernameLen) {
@@ -60,7 +60,7 @@
             const record = await pb.collection("users").create(data);
             console.log(record);
             if (record.id) {
-                console.log("Registration successful");
+                alert("Sėkminga registracija!");
             }
         } catch (err) {
             console.error("ERROR:" + err);

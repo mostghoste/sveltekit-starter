@@ -27,6 +27,7 @@
  */
 declare module '$env/static/private' {
 	export const PROFILEHOME: string;
+	export const XDG_ACTIVATION_TOKEN: string;
 	export const LESSOPEN: string;
 	export const KDE_FULL_SESSION: string;
 	export const LANGUAGE: string;
@@ -172,6 +173,7 @@ declare module '$env/static/public' {
 declare module '$env/dynamic/private' {
 	export const env: {
 		PROFILEHOME: string;
+		XDG_ACTIVATION_TOKEN: string;
 		LESSOPEN: string;
 		KDE_FULL_SESSION: string;
 		LANGUAGE: string;
