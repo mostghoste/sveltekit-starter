@@ -19,7 +19,7 @@
     <div class="prose flex flex-col gap-4">
         <PredictResults></PredictResults>
         <Leaderboard></Leaderboard>
-        <Profile></Profile>
+        <Profile user={data.user}></Profile>
     </div>
 </div>
 

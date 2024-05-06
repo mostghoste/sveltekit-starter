@@ -1,11 +1,20 @@
 <script lang="ts">
+    import type { UsersRecord } from "$lib/types/pocketbase-types";
     import IcSharpPerson from "~icons/ic/sharp-person";
     import TablerChefHat from "~icons/tabler/chef-hat";
-
+    export let user: UsersRecord;
     let shefas: boolean = true;
     let shefasPlaying = false;
 
     let recentWins: boolean[] = [true, true, false, false, true, true, false];
+
+    function formatTimestamp(timestamp: string): string {
+        const date = new Date(timestamp);
+        const year = date.getUTCFullYear();
+        const month = (date.getUTCMonth() + 1).toString().padStart(2, "0");
+
+        return `${year}-${month}`;
+    }
 </script>
 
 <div class="bg-gray-800 w-full h-fit rounded-md p-4 flex justify-start gap-2">
@@ -50,11 +59,15 @@
     <div class="flex flex-col flex-grow justify-between">
         <div>
             <div class="flex justify-between items-start">
-                <h4 class="text-gray-100 p-0 m-0 text-sm">sharunkis</h4>
-                <p class="p-0 m-0 text-xs text-gray-500">2024-07</p>
+                <h4 class="text-gray-100 p-0 m-0 text-sm">
+                    {user ? user.name : "Neprisijungęs"}
+                </h4>
+                <p class="p-0 m-0 text-xs text-gray-500">
+                    {formatTimestamp(user.created)}
+                </p>
             </div>
             <h5 class="text-xs text-gray-200 p-0 m-0">
-                sutriauškinsiu jus visus
+                ultra kietas beta testuotojas
             </h5>
         </div>
 
