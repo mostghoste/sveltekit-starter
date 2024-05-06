@@ -12,6 +12,21 @@ const config = {
     // If your environment is not supported, or you settled on a specific environment, switch out the adapter.
     // See https://kit.svelte.dev/docs/adapters for more information about adapters.
     adapter: adapter(),
+    vite: {
+      server: {
+          proxy: {
+              '/api': {
+                  target: 'http://185.34.52.111:8090',
+                  changeOrigin: true,
+                  rewrite: path => path.replace(/^\/api/, '')
+              }
+          },
+          cors: {
+              origin: "https://mostghoste.lt",
+              credentials: true
+          }
+      }
+  }
   },
 };
 
