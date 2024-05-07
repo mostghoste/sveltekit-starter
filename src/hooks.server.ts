@@ -25,9 +25,9 @@ export const handle: Handle = async ({ event, resolve }) => {
     try {
         const auth = await event.locals.pb
             .collection('users')
-            .authRefresh<{ id: string; email: string }>();
+            .authRefresh<{ id: string; username: string }>();
         event.locals.id = auth.record.id;
-        event.locals.email = auth.record.email;
+        event.locals.username = auth.record.username;
     } catch (_) {
         console.log("Couldn't reauthenticate")
         // throw redirect(303, '/auth');

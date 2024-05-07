@@ -16,7 +16,7 @@ const handle = async ({ event, resolve }) => {
   try {
     const auth = await event.locals.pb.collection("users").authRefresh();
     event.locals.id = auth.record.id;
-    event.locals.email = auth.record.email;
+    event.locals.username = auth.record.username;
   } catch (_) {
     console.log("Couldn't reauthenticate");
   }
